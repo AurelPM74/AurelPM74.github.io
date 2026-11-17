@@ -19,3 +19,7 @@
 .teaching-page {padding-top:7rem;padding-bottom:5rem;min-height:65vh}
 .teaching-back {display:inline-block;margin-bottom:1.5rem}
 .teaching-copy h2 {margin-top:2rem}
+
+/* Office details above the original Academia interactive map. */
+.contact-office-address {font-style:normal;line-height:1.75;margin-bottom:.55rem}
+.contact-widget #map {border-radius:.25rem;min-height:350px}

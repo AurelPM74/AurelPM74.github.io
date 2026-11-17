@@ -37,7 +37,9 @@
               {{- with .company_url}}<a href="{{.}}" target="_blank" rel="noopener">{{end}}{{.company | markdownify | emojify}}{{with .company_url}}</a>{{end -}}
             </h4>
             <div class="text-muted exp-meta">
-              {{ if .year }}
+              {{ if .period }}
+                {{ .period }}
+              {{ else if .year }}
                 {{ .year }}
               {{ else }}
                 {{ (time .date_start).Format ($page.Params.date_format | default "January 2006") }} –

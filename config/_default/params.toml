@@ -55,7 +55,7 @@ time_format = "15:04"
 # Enter contact details (optional). To hide a field, clear it to "".
 email = "" # Email is revealed only after a visitor clicks the contact button.
 phone = ""
-address = ""
+address = "Centre Inria de l'Université de Rennes, Campus universitaire de Beaulieu, Avenue du Général Leclerc, 35042 Rennes Cedex, France"
 
 # Office hours: use `<br>` to insert a line break, or set to "" to remove office hours
 office_hours = ""
@@ -82,11 +82,11 @@ contact_links = []
 #   1: Google Maps
 #   2: OpenStreetMap (Mapnik)
 #   3: OpenStreetMap (Mapbox)
-map = 0
+map = 2
 map_api_key = ""
-latitude = ""
-longitude = ""
-zoom = 15
+latitude = "48.11638"
+longitude = "-1.63965"
+zoom = 16
 
 ############################
 ## Plugins                ##

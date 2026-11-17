@@ -4,11 +4,34 @@
     <h1>{{ $page.Title | markdownify }}</h1>
     {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
   </div>
-  <div class="col-12 col-md-8 mx-auto text-center">
+  <div class="col-12 col-md-6 text-center text-md-left">
     <p>{{ if eq site.Language.Lang "fr" }}Vous pouvez me contacter à mon adresse universitaire.{{ else }}You can contact me at my academic email address.{{ end }}</p>
     <p><i class="fas fa-envelope mr-2" aria-hidden="true"></i><button type="button" class="btn btn-outline-primary" data-reveal-email>{{ if eq site.Language.Lang "fr" }}Afficher mon adresse e-mail{{ else }}Reveal email address{{ end }}</button></p>
     <noscript><p>{{ if eq site.Language.Lang "fr" }}Activez JavaScript pour révéler l’adresse, ou contactez-moi via LinkedIn.{{ else }}Enable JavaScript to reveal the email address, or contact me via LinkedIn.{{ end }}</p></noscript>
     <ul class="list-inline network-icon contact-social-links">{{ partial "social_icons.html" (dict "footer" true) }}</ul>
   </div>
+  <div class="col-12 col-md-6 text-center text-md-left">
+    <address class="contact-office-address">
+      <i class="fas fa-map-marker-alt mr-2" aria-hidden="true"></i><strong>{{ if eq site.Language.Lang "fr" }}Mon bureau{{ else }}Office{{ end }}</strong><br>
+      Centre Inria de l'Université de Rennes<br>
+      Campus universitaire de Beaulieu<br>
+      Avenue du Général Leclerc<br>
+      35042 Rennes Cedex, France
+    </address>
+    <p><a href="https://www.openstreetmap.org/?mlat=48.11638&amp;mlon=-1.63965#map=16/48.11638/-1.63965" target="_blank" rel="noopener noreferrer">{{ if eq site.Language.Lang "fr" }}Voir sur OpenStreetMap{{ else }}Open in OpenStreetMap{{ end }}</a></p>
+  </div>
+  {{ if eq site.Params.map 2 }}
+  <div class="col-12 mt-3">
+    <div class="d-none" aria-hidden="true">
+      <input id="map-provider" value="{{ site.Params.map }}">
+      <input id="map-lat" value="{{ site.Params.latitude }}">
+      <input id="map-lng" value="{{ site.Params.longitude }}">
+      <input id="map-dir" value="Centre Inria de l'Université de Rennes, Campus universitaire de Beaulieu, Rennes, France">
+      <input id="map-zoom" value="{{ site.Params.zoom | default 16 }}">
+      <input id="map-api-key" value="{{ site.Params.map_api_key }}">
+    </div>
+    <div id="map" role="region" aria-label="{{ if eq site.Language.Lang "fr" }}Carte du centre Inria à Rennes{{ else }}Map of Inria Rennes{{ end }}"></div>
+  </div>
+  {{ end }}
 </div>
 <script src="{{ "js/reveal-email.js" | relURL }}" defer></script>

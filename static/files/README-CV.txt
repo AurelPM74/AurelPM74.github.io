@@ -1,11 +1,11 @@
-Résumé / CV PDFs (not yet provided):
+Résumé / CV files:
 
-English site: place your PDF here as cv-en.pdf
-French site:  place your PDF here as cv-fr.pdf
+French PDF:  static/files/cv-fr.pdf — PROVIDED and active on /fr/.
+English PDF: static/files/cv-en.pdf — NOT PROVIDED yet; add your English CV using this exact filename.
 
-The corresponding download buttons are already configured in:
-content/en/authors/admin/_index.md
-content/fr/authors/admin/_index.md
+The existing download buttons in the author front matter are configured correctly:
+  content/en/authors/admin/_index.md
+  content/fr/authors/admin/_index.md
 
-If a PDF is absent, the corresponding language shows a disabled placeholder.
+The missing English PDF intentionally leaves the English download button disabled.
 Only publish documents you are happy to share publicly on GitHub Pages.
