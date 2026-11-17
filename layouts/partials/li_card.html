@@ -38,14 +38,16 @@
 
     <div class="card-body">
     <h3 class="article-title mb-1 mt-0" itemprop="name">
-      <a href="{{ $item.RelPermalink }}" itemprop="url">{{ $item.Title }}</a>
+      <a href="{{ $item.RelPermalink }}" itemprop="url">
+        {{ if eq $item.Type "talk" }}{{ $item.Params.event | default $item.Title }}{{ else }}{{ $item.Title }}{{ end }}
+      </a>
     </h3>
     {{ if eq $item.Type "talk" }}
     <div class="article-metadata">
       <span itemprop="startDate">{{ with $item.Params.display_date }}{{ . }}{{ else }}{{ $item.Date.Format site.Params.date_format }}{{ end }}</span>
-      {{ with $item.Params.event }}
+      {{ with $item.Title }}
       <span class="middot-divider"></span>
-      {{ if $item.Params.event_url }}<a href="{{ $item.Params.event_url }}" target="_blank" rel="noopener noreferrer">{{ . }}</a>{{ else }}{{ . }}{{ end }}
+      <span class="talk-card-title">{{ . }}</span>
       {{ end }}
     </div>
     {{ else }}

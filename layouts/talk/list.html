@@ -7,11 +7,11 @@
     {{ range $pages }}
     <li class="talks-list-item">
       <div class="talks-list-head">
-        <h3 class="talks-list-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <h3 class="talks-list-title"><a href="{{ .RelPermalink }}">{{ .Params.event | default .Title }}</a></h3>
         <span class="talks-list-date">{{ with .Params.display_date }}{{ . }}{{ else }}{{ .Date.Format "2 Jan 2006" }}{{ end }}</span>
       </div>
       <p class="talks-list-event">
-        {{ if .Params.event_url }}<a href="{{ .Params.event_url }}" target="_blank" rel="noopener noreferrer">{{ .Params.event }}</a>{{ else }}{{ .Params.event }}{{ end }}
+        <span class="talks-list-talk-title">{{ .Title }}</span>
         {{ with .Params.location }}<span class="middot-divider"></span>{{ . }}{{ end }}
       </p>
       {{ with .Params.summary }}<p class="talks-list-summary">{{ . | markdownify }}</p>{{ end }}
