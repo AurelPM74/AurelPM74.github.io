@@ -1,0 +1,21 @@
+/* Retain the original Academia color palette, dark mode, and education timeline. */
+.network-icon .social-placeholder, .social-placeholder {display:inline-block;opacity:.45;cursor:default}
+.network-icon .social-placeholder i {font-size:inherit}
+.resume-unavailable {cursor:not-allowed;opacity:.6}
+.contact-widget .contact-social-links {padding-left:0;margin:1.3rem 0 0}
+.contact-widget .contact-social-links li {display:inline-block;margin:0 .75rem}
+.contact-widget .contact-social-links a {font-size:1.5rem}
+/* Simple all-talks archive — no cards, shadows, or image tiles. */
+.talks-archive {padding-bottom:4rem}
+.talks-list {list-style:none;margin:1.5rem 0 0;padding:0}
+.talks-list-item {padding:1.3rem 0;border-bottom:1px solid rgba(140,140,140,.22)}
+.talks-list-item:first-child {border-top:1px solid rgba(140,140,140,.22)}
+.talks-list-head {display:flex;gap:1rem;justify-content:space-between;align-items:baseline;flex-wrap:wrap}
+.talks-list-title {font-size:1.13rem;margin:0}
+.talks-list-date {font-size:.86rem;opacity:.75;white-space:nowrap}
+.talks-list-event {margin:.3rem 0 .5rem;font-size:.93rem}
+.talks-list-summary {margin:.4rem 0;font-size:.91rem;opacity:.85}
+.talks-list-item .btn-links {margin:.35rem 0 0}
+.teaching-page {padding-top:7rem;padding-bottom:5rem;min-height:65vh}
+.teaching-back {display:inline-block;margin-bottom:1.5rem}
+.teaching-copy h2 {margin-top:2rem}

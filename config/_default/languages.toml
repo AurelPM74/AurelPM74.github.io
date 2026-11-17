@@ -1,0 +1,55 @@
+[en]
+  contentDir = "content/en"
+  label = "English"
+  locale = "en-US"
+  title = "Aurel Pichollet--Mugnier"
+  weight = 1
+
+  [[en.menus.main]]
+    name = "Home"
+    url = "/#about"
+    weight = 10
+  [[en.menus.main]]
+    name = "Publications"
+    url = "/#publications"
+    weight = 20
+  [[en.menus.main]]
+    name = "Talks"
+    url = "/#talks"
+    weight = 30
+  [[en.menus.main]]
+    name = "Teaching"
+    url = "/teaching/"
+    weight = 40
+  [[en.menus.main]]
+    name = "Contact"
+    url = "/#contact"
+    weight = 50
+
+[fr]
+  contentDir = "content/fr"
+  label = "Français"
+  locale = "fr-FR"
+  title = "Aurel Pichollet--Mugnier"
+  weight = 2
+
+  [[fr.menus.main]]
+    name = "Accueil"
+    url = "/#about"
+    weight = 10
+  [[fr.menus.main]]
+    name = "Publications"
+    url = "/#publications"
+    weight = 20
+  [[fr.menus.main]]
+    name = "Exposés"
+    url = "/#talks"
+    weight = 30
+  [[fr.menus.main]]
+    name = "Enseignement"
+    url = "/teaching/"
+    weight = 40
+  [[fr.menus.main]]
+    name = "Contact"
+    url = "/#contact"
+    weight = 50

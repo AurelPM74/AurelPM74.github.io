@@ -1,0 +1,19 @@
+# Edit these URLs in one place for both languages (social icons are unchanged).
+[[links]]
+name = "LinkedIn"
+icon = "linkedin"
+icon_pack = "fab"
+url = "https://www.linkedin.com/in/aurelpm/"
+
+[[links]]
+name = "Google Scholar"
+icon = "google-scholar"
+icon_pack = "ai"
+# Omit the malformed hl=fror parameter from the supplied link.
+url = "https://scholar.google.com/citations?user=PUy0HcoAAAAJ"
+
+[[links]]
+name = "ORCID"
+icon = "orcid"
+icon_pack = "ai"
+url = "https://orcid.org/0009-0008-3923-7116"

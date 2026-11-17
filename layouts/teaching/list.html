@@ -1,0 +1,9 @@
+{{ define "main" }}
+<main class="container teaching-page">
+  <div class="row"><div class="col-lg-8 mx-auto">
+    <a class="teaching-back" href="{{ site.Home.RelPermalink }}">← {{ if eq site.Language.Lang "fr" }}Retour à l’accueil{{ else }}Back to home{{ end }}</a>
+    <h1>{{ .Title }}</h1>
+    <div class="teaching-copy">{{ .Content }}</div>
+  </div></div>
+</main>
+{{ end }}

@@ -1,0 +1,14 @@
+{{ $page := .page }}
+<div class="row contact-widget">
+  <div class="col-12 text-center section-heading">
+    <h1>{{ $page.Title | markdownify }}</h1>
+    {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+  </div>
+  <div class="col-12 col-md-8 mx-auto text-center">
+    <p>{{ if eq site.Language.Lang "fr" }}Vous pouvez me contacter à mon adresse universitaire.{{ else }}You can contact me at my academic email address.{{ end }}</p>
+    <p><i class="fas fa-envelope mr-2" aria-hidden="true"></i><button type="button" class="btn btn-outline-primary" data-reveal-email>{{ if eq site.Language.Lang "fr" }}Afficher mon adresse e-mail{{ else }}Reveal email address{{ end }}</button></p>
+    <noscript><p>{{ if eq site.Language.Lang "fr" }}Activez JavaScript pour révéler l’adresse, ou contactez-moi via LinkedIn.{{ else }}Enable JavaScript to reveal the email address, or contact me via LinkedIn.{{ end }}</p></noscript>
+    <ul class="list-inline network-icon contact-social-links">{{ partial "social_icons.html" (dict "footer" true) }}</ul>
+  </div>
+</div>
+<script src="{{ "js/reveal-email.js" | relURL }}" defer></script>

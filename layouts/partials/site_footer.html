@@ -1,0 +1,24 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        {{ with site.GetPage "privacy.md" }}
+        <p class="powered-by">
+          {{ printf "<a href=\"%s\">%s</a>" .RelPermalink .Title | safeHTML }}
+        </p>
+        {{ end }}
+        <p class="mb-0">
+          {{ with site.Copyright }}{{ replace . "{year}" now.Year | markdownify}} &middot; {{ end }}
+          Powered by
+          <a href="https://gethugothemes.com" target="_blank" rel="noopener">Gethugothemes</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-inline network-icon text-right mb-0">
+          {{/* Social links from the shared, editable file. */}}
+          {{ partial "social_icons.html" (dict "footer" true) }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

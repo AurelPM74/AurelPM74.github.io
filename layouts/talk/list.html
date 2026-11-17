@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ partial "page_header.html" . }}
+<div class="universal-wrapper talks-archive">
+  {{ with .Content }}<div class="article-style">{{ . }}</div>{{ end }}
+  {{ $pages := .RegularPages.ByDate.Reverse }}
+  <ul class="talks-list">
+    {{ range $pages }}
+    <li class="talks-list-item">
+      <div class="talks-list-head">
+        <h3 class="talks-list-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <span class="talks-list-date">{{ with .Params.display_date }}{{ . }}{{ else }}{{ .Date.Format "2 Jan 2006" }}{{ end }}</span>
+      </div>
+      <p class="talks-list-event">
+        {{ if .Params.event_url }}<a href="{{ .Params.event_url }}" target="_blank" rel="noopener noreferrer">{{ .Params.event }}</a>{{ else }}{{ .Params.event }}{{ end }}
+        {{ with .Params.location }}<span class="middot-divider"></span>{{ . }}{{ end }}
+      </p>
+      {{ with .Params.summary }}<p class="talks-list-summary">{{ . | markdownify }}</p>{{ end }}
+      <div class="btn-links">{{ partial "page_links" (dict "page" . "is_list" 1) }}</div>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

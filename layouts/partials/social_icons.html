@@ -1,0 +1,16 @@
+{{- /* Displays social links using one language-independent data file. */ -}}
+{{- range site.Data.social_links.links -}}
+  {{- $pack := .icon_pack | default "fab" -}}
+  {{- $prefix := cond (eq $pack "ai") "ai" "fa" -}}
+  <li class="{{ if $.footer }}list-inline-item{{ else }}mx-3{{ end }}">
+  {{- if .url -}}
+    <a href="{{ .url | safeURL }}" target="_blank" rel="noopener noreferrer" title="{{ .name }}" aria-label="{{ .name }}">
+      <i class="{{ $pack }} {{ $prefix }}-{{ .icon }}" aria-hidden="true"></i>
+    </a>
+  {{- else -}}
+    <span class="social-placeholder" title="{{ .name }} — add URL in data/social_links.toml" aria-label="{{ .name }} — profile link coming soon">
+      <i class="{{ $pack }} {{ $prefix }}-{{ .icon }}" aria-hidden="true"></i>
+    </span>
+  {{- end -}}
+  </li>
+{{- end -}}

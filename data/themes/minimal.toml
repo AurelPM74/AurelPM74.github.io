@@ -1,0 +1,9 @@
+name = "Minimal"
+light = true
+primary = "#345b75"
+menu_primary = "#ffffff"
+menu_text = "#455363"
+menu_text_active = "#274e69"
+menu_title = "#1e293b"
+home_section_odd = "#ffffff"
+home_section_even = "#ffffff"

@@ -1,0 +1,2 @@
+# Main menu items are defined per-language in languages.toml.
+# This keeps the French and English navigation independent.
